@@ -26,7 +26,28 @@
       height: 100vh;
       text-align: center;
     }
-    .container { max-width: 800px; padding: 20px; }
+
+    .container {
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 2.2em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
     .btn {
       display:inline-block;
       margin-top:20px;
@@ -37,17 +58,48 @@
       text-decoration:none;
       font-weight:bold;
     }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .linkedin {
+      margin-top: 10px;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <img src="logo.png" alt="Syscentral Technologies Logo">
+
     <h1>Syscentral Technologies</h1>
-    <p>Business Central / Navision Development & Consultancy</p>
+
+    <p>
+      Empowering businesses on dynamic journeys with custom-crafted solutions.
+      <br><br>
+      Specialising in Business Central / Navision development and technical consultancy.
+    </p>
 
     <a href="mailto:tommy.newman@syscentraltechnologies.co.uk"
        onclick="handleContactClick(event)"
        class="btn">
       📧 Contact Us
+    </a>
+
+    <div style="margin-top:20px;">
+      <a href="mailto:tommy.newman@syscentraltechnologies.co.uk">
+        tommy.newman@syscentraltechnologies.co.uk
+      </a>
+    </div>
+
+    <a class="linkedin" href="https://www.linkedin.com/in/syscentral-technologies-b717943b2/" target="_blank">
+      LinkedIn Profile
     </a>
   </div>
 
@@ -75,5 +127,6 @@
       }, 1200);
     }
   </script>
+
 </body>
 </html>
