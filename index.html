@@ -81,22 +81,45 @@
       Specialising in Business Central / Navision development and technical consultancy.
     </p>
 
-<div class="email">
-  📧 
-  <a href="mailto:tommy.newman@syscentraltechnologies.co.uk"
-     onclick="
-       gtag('event', 'conversion', {'send_to': 'AW-18105541014/zg2uCIS756QcEJbDsrlD'});
-       setTimeout(function(){
-         window.location.href='thank-you.html';
-       }, 500);
-     ">
-    tommy.newman@syscentraltechnologies.co.uk
-  </a>
-</div>
+    <div class="email">
+      📧 
+      <a href="mailto:tommy.newman@syscentraltechnologies.co.uk"
+         onclick="trackEmailClick(event)">
+        tommy.newman@syscentraltechnologies.co.uk
+      </a>
+    </div>
 
     <a class="linkedin" href="https://www.linkedin.com/in/syscentral-technologies-b717943b2/" target="_blank">
       LinkedIn Profile
     </a>
   </div>
+
+  <!-- ✅ Proper tracking script -->
+  <script>
+    function trackEmailClick(event) {
+      event.preventDefault();
+
+      var email = "mailto:tommy.newman@syscentraltechnologies.co.uk";
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18105541014/zg2uCIS756QcEJbDsrlD',
+        'event_callback': function () {
+          window.location.href = email;
+          setTimeout(function(){
+            window.location.href = "thank-you.html";
+          }, 500);
+        }
+      });
+
+      // Fallback (ensures it still works if tracking fails)
+      setTimeout(function () {
+        window.location.href = email;
+        setTimeout(function(){
+          window.location.href = "thank-you.html";
+        }, 500);
+      }, 1200);
+    }
+  </script>
+
 </body>
 </html>
