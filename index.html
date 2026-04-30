@@ -84,7 +84,12 @@
 <div class="email">
   📧 
   <a href="mailto:tommy.newman@syscentraltechnologies.co.uk"
-     onclick="gtag('event', 'conversion', {'send_to': 'AW-18105541014/zg2uCIS756QcEJbDsrlD'});">
+     onclick="
+       gtag('event', 'conversion', {'send_to': 'AW-18105541014/zg2uCIS756QcEJbDsrlD'});
+       setTimeout(function(){
+         window.location.href='/thank-you.html';
+       }, 500);
+     ">
     tommy.newman@syscentraltechnologies.co.uk
   </a>
 </div>
