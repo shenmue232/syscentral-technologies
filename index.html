@@ -11,7 +11,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-18105541014');
   </script>
 
@@ -27,98 +26,38 @@
       height: 100vh;
       text-align: center;
     }
-
-    .container {
-      max-width: 800px;
-      padding: 20px;
-    }
-
-    img {
-      max-width: 200px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      margin: 10px 0;
-      font-size: 2.2em;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #cbd5e1;
-    }
-
-    .email {
-      margin-top: 20px;
-      font-size: 1.2em;
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .linkedin {
-      margin-top: 10px;
-      display: block;
-    }
+    .container { max-width: 800px; padding: 20px; }
+    img { max-width: 200px; margin-bottom: 20px; }
+    h1 { margin: 10px 0; font-size: 2.2em; }
+    p { font-size: 1.1em; line-height: 1.6; color: #cbd5e1; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .btn { display:inline-block; margin-top:20px; padding:12px 20px; background:#38bdf8; color:#000; border-radius:6px; }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="logo.png" alt="Syscentral Technologies Logo">
-
     <h1>Syscentral Technologies</h1>
-
     <p>
       Empowering businesses on dynamic journeys with custom-crafted solutions.
       <br><br>
       Specialising in Business Central / Navision development and technical consultancy.
     </p>
 
-    <div class="email">
-      📧 
-<a href="mailto:tommy.newman@syscentraltechnologies.co.uk">
-  tommy.newman@syscentraltechnologies.co.uk
-</a>
-    </div>
+    <a class="btn" href="thank-you.html">📧 Contact Us</a>
 
-    <a class="linkedin" href="https://www.linkedin.com/in/syscentral-technologies-b717943b2/" target="_blank">
+    <p style="margin-top:20px;">
+      Or email directly:
+      <br>
+      <a href="mailto:tommy.newman@syscentraltechnologies.co.uk">
+        tommy.newman@syscentraltechnologies.co.uk
+      </a>
+    </p>
+
+    <a href="https://www.linkedin.com/in/syscentral-technologies-b717943b2/" target="_blank">
       LinkedIn Profile
     </a>
   </div>
-
-  <!-- ✅ Proper tracking script -->
-  <script>
-    function trackEmailClick(event) {
-      event.preventDefault();
-
-      var email = "mailto:tommy.newman@syscentraltechnologies.co.uk";
-
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18105541014/zg2uCIS756QcEJbDsrlD',
-        'event_callback': function () {
-          window.location.href = email;
-          setTimeout(function(){
-            window.location.href = "thank-you.html";
-          }, 500);
-        }
-      });
-
-      // Fallback (ensures it still works if tracking fails)
-      setTimeout(function () {
-        window.location.href = email;
-        setTimeout(function(){
-          window.location.href = "thank-you.html";
-        }, 500);
-      }, 1200);
-    }
-  </script>
-
 </body>
 </html>
